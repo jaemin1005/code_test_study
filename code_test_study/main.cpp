@@ -9,6 +9,7 @@
 #include "number_block/number_block.hpp"
 #include "representation_of_numbers/representation_of_numbers.hpp"
 #include "12936/how_to_line_up.hpp"
+#include "12939/min_and_max.hpp"
 
 int main(int argc, const char * argv[]) {
     
@@ -43,6 +44,14 @@ int main(int argc, const char * argv[]) {
     
     
     cout << "Result how_to_line_up : " << (is_equal ? "true" : "false") << '\n' << endl;
+    //
+    
+    // min_and_max
+    string result_min_and_max = min_and_max("1 2 3 4");
+    
+    is_equal = (result_min_and_max == "1 4");
+    
+    cout << "Result min_and_max : " << (is_equal ? "true" : "false") << '\n' << endl;
     
     return 0;
 }
