@@ -34,26 +34,20 @@ vector<int> Number_Block(long long begin, long long end){
             return_vec[0] = 0;
             continue;
         }
-
-        bool bfind = false;
         
         for(int num = 2 ; num * num <= idx ; num++){
             if(idx % num == 0){
                 long long divisor = idx / num;
-                
-                bfind = true;
-                if(divisor <= LIMIT_NUM)
+
+                if(divisor <= LIMIT_NUM){
                     return_vec[idx-begin] = divisor;
+                    break;
+                }
                 else if(num <= LIMIT_NUM){
                     return_vec[idx-begin] = num;
-                    break;
                 }
             }
         }
-        
-        if(bfind == false)
-            return_vec[idx-begin] = 1;
-        
     }
     
     return return_vec;
