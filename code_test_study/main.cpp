@@ -10,6 +10,7 @@
 #include "representation_of_numbers/representation_of_numbers.hpp"
 #include "12936/how_to_line_up.hpp"
 #include "12939/min_and_max.hpp"
+#include "12941/make_min.hpp"
 
 int main(int argc, const char * argv[]) {
     
@@ -52,6 +53,13 @@ int main(int argc, const char * argv[]) {
     is_equal = (result_min_and_max == "1 4");
     
     cout << "Result min_and_max : " << (is_equal ? "true" : "false") << '\n' << endl;
+    
+    // make_min
+    int result_make_min = make_min({1, 4, 2}, {5, 4, 4});
+    
+    is_equal = (result_make_min == 29);
+    
+    cout << "Result make_min : " << (is_equal ? "true" : "false") << '\n' << endl;
     
     return 0;
 }
