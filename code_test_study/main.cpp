@@ -8,6 +8,7 @@
 #include <iostream>
 #include "number_block/number_block.hpp"
 #include "representation_of_numbers/representation_of_numbers.hpp"
+#include "12936/how_to_line_up.hpp"
 
 int main(int argc, const char * argv[]) {
     
@@ -34,6 +35,14 @@ int main(int argc, const char * argv[]) {
     cout << "representation of numbers: " << result_representation_of_numbers << endl;
     cout << "Result representation of numbers: " << (is_equal ? "true" : "false") << '\n' << endl;
     //
+    
+    // how_to_line_up
+    vector<int> result_how_to_line_up = how_to_line_up(3, 5);
+    
+    is_equal = (result_how_to_line_up == vector<int>({3,1,2}));
+    
+    
+    cout << "Result how_to_line_up : " << (is_equal ? "true" : "false") << '\n' << endl;
     
     return 0;
 }
