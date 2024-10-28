@@ -6,12 +6,14 @@
 //
 
 #include <iostream>
+#include <algorithm>
 #include "number_block/number_block.hpp"
 #include "representation_of_numbers/representation_of_numbers.hpp"
 #include "12936/how_to_line_up.hpp"
 #include "12939/min_and_max.hpp"
 #include "12941/make_min.hpp"
 #include "12945/fivonachi.hpp"
+#include "12946/hanoi.hpp"
 
 int main(int argc, const char * argv[]) {
     
@@ -69,6 +71,13 @@ int main(int argc, const char * argv[]) {
     is_equal = (result_fivonachi == 5);
     
     cout << "Result fivonachi : " << (is_equal ? "true" : "false") << '\n' << endl;
+    
+    vector<vector<int>> result_hanoi = hanoi(2);
+    vector<std::vector<int>> expected_hanoi = {{1, 2}, {1, 3}, {2, 3}};
+
+    is_equal = std::equal(result_hanoi.begin(), result_hanoi.end(), expected_hanoi.begin());
+    
+    cout << "Result hanoi : " << (is_equal ? "true" : "false") << '\n' << endl;
     
     return 0;
 }
