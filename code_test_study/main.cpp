@@ -7,8 +7,10 @@
 
 #include <iostream>
 #include "number_block/number_block.hpp"
+#include "representation_of_numbers/representation_of_numbers.hpp"
 
 int main(int argc, const char * argv[]) {
+    
     // number_block
     vector<int> result_number_block = Number_Block(1, 10);
     vector<int> expected_result = {0, 1, 1, 2, 1, 3, 1, 4, 3, 5};
@@ -21,7 +23,17 @@ int main(int argc, const char * argv[]) {
     }
     cout << endl;
     
-    cout << "Result number block is correct: " << (is_equal ? "true" : "false") << endl;
+    cout << "Result number block is correct: " << (is_equal ? "true" : "false") << '\n' << endl;
+    //
+    
+    // representation_of_numbers
+    int result_representation_of_numbers = representation_of_numbers(15);
+    
+    is_equal = (result_representation_of_numbers == 4);
+    
+    cout << "representation of numbers: " << result_representation_of_numbers << endl;
+    cout << "Result representation of numbers: " << (is_equal ? "true" : "false") << '\n' << endl;
+    //
     
     return 0;
 }
