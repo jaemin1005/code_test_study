@@ -11,6 +11,7 @@
 #include "12936/how_to_line_up.hpp"
 #include "12939/min_and_max.hpp"
 #include "12941/make_min.hpp"
+#include "12945/fivonachi.hpp"
 
 int main(int argc, const char * argv[]) {
     
@@ -60,6 +61,14 @@ int main(int argc, const char * argv[]) {
     is_equal = (result_make_min == 29);
     
     cout << "Result make_min : " << (is_equal ? "true" : "false") << '\n' << endl;
+    //
+    
+    // fivonachi
+    int result_fivonachi = fivonachi(5);
+    
+    is_equal = (result_fivonachi == 5);
+    
+    cout << "Result fivonachi : " << (is_equal ? "true" : "false") << '\n' << endl;
     
     return 0;
 }
