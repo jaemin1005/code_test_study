@@ -6,9 +6,22 @@
 //
 
 #include <iostream>
+#include "number_block/number_block.hpp"
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    // number_block
+    vector<int> result_number_block = Number_Block(1, 10);
+    vector<int> expected_result = {0, 1, 1, 2, 1, 3, 1, 4, 3, 5};
+    
+    bool is_equal = (result_number_block == expected_result);
+    
+    cout << "result number block: ";
+    for (int num : result_number_block) {
+        cout << num << " ";
+    }
+    cout << endl;
+    
+    cout << "Result number block is correct: " << (is_equal ? "true" : "false") << endl;
+    
     return 0;
 }
