@@ -15,6 +15,8 @@
 #include "12945/fivonachi.hpp"
 #include "12946/hanoi.hpp"
 #include "12949/multiple_matrix.hpp"
+#include "12951/jaden_case.hpp"
+
 int main(int argc, const char * argv[]) {
     
     // number_block
@@ -78,6 +80,7 @@ int main(int argc, const char * argv[]) {
     is_equal = std::equal(result_hanoi.begin(), result_hanoi.end(), expected_hanoi.begin());
     
     cout << "Result hanoi : " << (is_equal ? "true" : "false") << '\n' << endl;
+    //
     
     // multiple_matrix
     vector<vector<int>> result_multiple_matrix = multiple_matrix({{1, 4}, {3, 2}, {4, 1}}, {{3, 3}, {3, 3}});
@@ -86,6 +89,14 @@ int main(int argc, const char * argv[]) {
     is_equal = equal(result_multiple_matrix.begin(), result_multiple_matrix.end(), expected_multiple_matrix.begin());
     
     cout << "Result multiple_matrix : " << (is_equal ? "true" : "false") << '\n' << endl;
+    //
+    
+    // jaden_case
+    string result_jaden_case = jaden_case("3people unFollowed me");
+    
+    is_equal = result_jaden_case == "3people Unfollowed Me";
+    
+    cout << "Result jaden_case : " << (is_equal ? "true" : "false") << '\n' << endl;
     
     return 0;
 }
