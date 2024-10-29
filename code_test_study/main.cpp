@@ -20,6 +20,7 @@
 #include "12953/least_common_multiple.hpp"
 #include "12973/pair_removal.hpp"
 #include "12978/delivery.hpp"
+#include "12980/jump_and_teleport.hpp"
 
 int main(int argc, const char * argv[]) {
     
@@ -137,6 +138,16 @@ int main(int argc, const char * argv[]) {
     is_equal = result_delivery == 4;
     
     cout << "Result delivery : " << (is_equal ? "true" : "false" ) << '\n' << endl;
+    
+    //
+    
+    // jump_and_teleport
+    int result_jump_and_teleport = jump_and_teleport(5000);
+    
+    is_equal = result_jump_and_teleport == 5;
+    
+    cout << "Result jump_and_teleport : " << (is_equal ? "true" : "false") << '\n' << endl;
+    //
     
     return 0;
 }
