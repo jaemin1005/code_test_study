@@ -13,6 +13,6 @@
 
 using namespace std;
 
-int pair_removal(string s);
+int pair_removal(string &s);
 
 #endif /* pair_removal_hpp */
