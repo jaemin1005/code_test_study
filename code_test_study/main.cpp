@@ -19,6 +19,7 @@
 #include "12952/n_queen.hpp"
 #include "12953/least_common_multiple.hpp"
 #include "12973/pair_removal.hpp"
+#include "12978/delivery.hpp"
 
 int main(int argc, const char * argv[]) {
     
@@ -119,13 +120,23 @@ int main(int argc, const char * argv[]) {
     
     cout << "Result least_common_multiple : " << (is_equal ? "true" : "false") << '\n' << endl;
     
-    return 0;
     //
     
     // pair_removal
-    int result_pair_removal = pair_removal("baabaa");
+    string pair_removal_args = "baabaa";
+    int result_pair_removal = pair_removal(pair_removal_args);
     
-    is_equal = result_pair_removal == 0;
+    is_equal = result_pair_removal == 1;
     
     cout << "Result pair_removal : " << (is_equal ? "true" : "false") << '\n' << endl;
+    //
+    
+    // delivery
+    int result_delivery = delivery(5, {{1,2,1},{2,3,3},{5,2,2},{1,4,2},{5,3,1},{5,4,2}}, 3);
+    
+    is_equal = result_delivery == 4;
+    
+    cout << "Result delivery : " << (is_equal ? "true" : "false" ) << '\n' << endl;
+    
+    return 0;
 }

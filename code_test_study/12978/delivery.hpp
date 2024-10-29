@@ -9,5 +9,10 @@
 #define delivery_hpp
 
 #include <stdio.h>
+#include <vector>
+
+using namespace std;
+
+int delivery(int N, vector<vector<int> > road, int K);
 
 #endif /* delivery_hpp */
