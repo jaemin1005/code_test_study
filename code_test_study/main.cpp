@@ -21,6 +21,7 @@
 #include "12973/pair_removal.hpp"
 #include "12978/delivery.hpp"
 #include "12980/jump_and_teleport.hpp"
+#include "12981/word_game.hpp"
 
 int main(int argc, const char * argv[]) {
     
@@ -148,6 +149,14 @@ int main(int argc, const char * argv[]) {
     
     cout << "Result jump_and_teleport : " << (is_equal ? "true" : "false") << '\n' << endl;
     //
+    
+    // word_game
+    vector<int> result_word_game = word_game(3, {"tank", "kick", "know", "wheel", "land", "dream", "mother", "robot", "tank"});
+    vector<int> expected_word_game = {3,3};
+    
+    is_equal = equal(result_word_game.begin(), result_word_game.end(), expected_word_game.begin());
+    
+    cout << "Result word_game : " << (is_equal ? "true" : "false" ) << '\n' << endl;
     
     return 0;
 }
