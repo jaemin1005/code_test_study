@@ -18,6 +18,7 @@
 #include "12951/jaden_case.hpp"
 #include "12952/n_queen.hpp"
 #include "12953/least_common_multiple.hpp"
+#include "12973/pair_removal.hpp"
 
 int main(int argc, const char * argv[]) {
     
@@ -119,4 +120,12 @@ int main(int argc, const char * argv[]) {
     cout << "Result least_common_multiple : " << (is_equal ? "true" : "false") << '\n' << endl;
     
     return 0;
+    //
+    
+    // pair_removal
+    int result_pair_removal = pair_removal("baabaa");
+    
+    is_equal = result_pair_removal == 0;
+    
+    cout << "Result pair_removal : " << (is_equal ? "true" : "false") << '\n' << endl;
 }
