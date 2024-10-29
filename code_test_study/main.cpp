@@ -16,6 +16,7 @@
 #include "12946/hanoi.hpp"
 #include "12949/multiple_matrix.hpp"
 #include "12951/jaden_case.hpp"
+#include "12952/n_queen.hpp"
 
 int main(int argc, const char * argv[]) {
     
@@ -97,6 +98,16 @@ int main(int argc, const char * argv[]) {
     is_equal = result_jaden_case == "3people Unfollowed Me";
     
     cout << "Result jaden_case : " << (is_equal ? "true" : "false") << '\n' << endl;
+    //
     
+    // n_queen
+    
+    int result_n_qeen = n_queen(4);
+    
+    is_equal = result_n_qeen == 2;
+    
+    cout << "Result n_queen : " << (is_equal ? "true" : "false") << '\n' << endl;
+    
+    //
     return 0;
 }
