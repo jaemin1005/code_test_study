@@ -17,6 +17,7 @@
 #include "12949/multiple_matrix.hpp"
 #include "12951/jaden_case.hpp"
 #include "12952/n_queen.hpp"
+#include "12953/least_common_multiple.hpp"
 
 int main(int argc, const char * argv[]) {
     
@@ -109,5 +110,13 @@ int main(int argc, const char * argv[]) {
     cout << "Result n_queen : " << (is_equal ? "true" : "false") << '\n' << endl;
     
     //
+    
+    // least_common_multiple
+    int result_leaset_common_multiple = least_common_multiple({2,6,8,14});
+    
+    is_equal = result_leaset_common_multiple == 168;
+    
+    cout << "Result least_common_multiple : " << (is_equal ? "true" : "false") << '\n' << endl;
+    
     return 0;
 }
