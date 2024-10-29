@@ -22,6 +22,7 @@
 #include "12978/delivery.hpp"
 #include "12980/jump_and_teleport.hpp"
 #include "12981/word_game.hpp"
+#include "12985/predicted_matchup.hpp"
 
 int main(int argc, const char * argv[]) {
     
@@ -157,6 +158,13 @@ int main(int argc, const char * argv[]) {
     is_equal = equal(result_word_game.begin(), result_word_game.end(), expected_word_game.begin());
     
     cout << "Result word_game : " << (is_equal ? "true" : "false" ) << '\n' << endl;
+    
+    // predicted_matchup
+    int result_predicted_matchup = predicted_matchup(8, 4, 7);
+    
+    is_equal = result_predicted_matchup == 3;
+    
+    cout << "Result predicted_matchup : " << (is_equal ? "true" : "false") << '\n' << endl;
     
     return 0;
 }
