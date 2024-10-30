@@ -25,6 +25,7 @@
 #include "12985/predicted_matchup.hpp"
 #include "17677/news_clustering.hpp"
 #include "17679/frieds_four_block.hpp"
+#include "17680/cache_LRU.hpp"
 
 int main(int argc, const char * argv[]) {
     
@@ -180,5 +181,11 @@ int main(int argc, const char * argv[]) {
     
     cout << "Result friends_four_block : " << (is_equal ? "true" : "false") << '\n' << endl;
     
+    int result_cache_LRU = cache_LRU(3, {"Jeju", "Pangyo", "Seoul", "Jeju", "Pangyo", "Seoul", "Jeju", "Pangyo", "Seoul"});
+    
+    is_equal = result_cache_LRU == 21;
+    
+    cout << "Result cache_LRU : " << (is_equal ? "true" : "false" ) << '\n' << endl;
+ 
     return 0;
 }
