@@ -32,7 +32,7 @@
 #include "frieds_four_block.hpp"
 #include <set>
 
-int friends_four_block(int m, int n, vector<string>& board) {
+int friends_four_block(int m, int n, vector<string> board) {
     vector<pair<int, int>> directions = {{0, 1}, {1, 0}, {1, 1}};
     int total_removed = 0;
 

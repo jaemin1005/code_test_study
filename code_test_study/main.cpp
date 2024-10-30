@@ -24,6 +24,7 @@
 #include "12981/word_game.hpp"
 #include "12985/predicted_matchup.hpp"
 #include "17677/news_clustering.hpp"
+#include "17679/frieds_four_block.hpp"
 
 int main(int argc, const char * argv[]) {
     
@@ -169,9 +170,15 @@ int main(int argc, const char * argv[]) {
     
     int result_news_clustering = news_clustering("E=M*C^2", "e=m*c^2");
     
-    is_equal = result_news_clustering == 16384;
+    is_equal = result_news_clustering == 65536;
     
     cout << "Result news clstering : " << (is_equal ? "true" : "false") << '\n' << endl;
+    
+    int result_friends_four_block = friends_four_block(4, 5, {"CCBDE", "AAADE", "AAABF", "CCBBF"});
+    
+    is_equal = result_friends_four_block == 14;
+    
+    cout << "Result friends_four_block : " << (is_equal ? "true" : "false") << '\n' << endl;
     
     return 0;
 }
