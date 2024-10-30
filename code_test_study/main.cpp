@@ -23,6 +23,7 @@
 #include "12980/jump_and_teleport.hpp"
 #include "12981/word_game.hpp"
 #include "12985/predicted_matchup.hpp"
+#include "17677/news_clustering.hpp"
 
 int main(int argc, const char * argv[]) {
     
@@ -165,6 +166,12 @@ int main(int argc, const char * argv[]) {
     is_equal = result_predicted_matchup == 3;
     
     cout << "Result predicted_matchup : " << (is_equal ? "true" : "false") << '\n' << endl;
+    
+    int result_news_clustering = news_clustering("E=M*C^2", "e=m*c^2");
+    
+    is_equal = result_news_clustering == 16384;
+    
+    cout << "Result news clstering : " << (is_equal ? "true" : "false") << '\n' << endl;
     
     return 0;
 }
